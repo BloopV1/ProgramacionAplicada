@@ -1,0 +1,7 @@
+1 2 3 PIEDRA PAPEL O TIJERAS?
+
+Dentro de lo visto en clase cree una funcion que le permita jugar piedra papel o tijera con la consola de comando en python el juego tiene qeu cumplir con que:
+
+- se pueda jugar de las 3 maneras ✊,✋,✌ y la Consola tambien tiene que usar a estows tres.
+- el juego debe tener una opcion de repeticion que quiero decir: siempre que acabe la partida tiene que haber una opcion para la repeticion de esta. 
+- Que el jnuego disfrutable intentalo ;)
