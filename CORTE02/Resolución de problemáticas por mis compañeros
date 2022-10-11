@@ -1,0 +1,68 @@
+RESPUESTAS DE CODIGOS POR LOS COMPAÑEROS 
+
+1 Pregunta:
+RODRIGUEZ REY,MIGUEL ANGEL
+
+
+#Ejecutar un algoritmo en el que el usuario ingrese un número al principio y al final y el número a multiplicar, utilizando la función para dar una tabla de multiplicar:
+numero = int(input(" ¿que multiplicador desea colocar?: "))
+j = int(input("¿que digito numerio tiene plantedo para la tabla?: "))
+h = int(input("¿que limite tiene en la tabla?: "))
+
+def tabla_multiplicacion(numero): #Definimos la funcion para que trabaje con ciertos parametros los cuales sera numero el cual funciona para nuestro entero
+    for i in range (j,h+1): #establecemos el bulce que si i dentro de un rango funcionara como j el cual sera un variable que le asignaremos un uso  y h el cual ira sumando termino tras termino para los multiploc dependiendo cuantas veces lo usaremos
+        print(i, "*", numero, "=", i*numero) #al final imprimimos el codigo con su respectivo termino multiplo
+tabla_multiplicacion(numero)
+
+
+2 Pregunta:
+LOZANO TOVAR,JUAN JOSE
+#GENERADOR DE CONTRASEÑAS
+
+#Usando la librería random y una función que contenga las letras minusculas, mayusculas (sin tilde), números y simbolos 
+#Las organice de una manera aleatoria y muestre una contraseña del tamaño asignado 
+
+Ej:       15 caracteres =======> Tu nueva contraseña es: Be?t]<N_ñZ8e8U(
+
+import random   # se importa la libreria que ejecuta el codigo con variables random
+num=int(input('cual e la cantidad de cifras que deasea para su contraseña')) # se le pide al usuario cuantos digitos desea implementar en la contraseña 
+def contraseña(numero): #definimos la variable contraseña y dentro de esta colocamos una variable diferenciadora la cual es num
+    clave = ''  #se crea la variable para la clave nueva
+    for i in range(numero):    # se repite la funcion para generar la contraseña de la longitud requerida
+        clave+= random.choice('|1234567890¿¡°!"#$%&/()=?¡qwertyuiop´+asdfghjklñ{}<zxcvbnm,.-QWERTYUIOP¨*ASDFGHJKLÑ[]>ZXCVBNM;:_')  #se da un parametro para todo el tipo de tipeo que se puede dar dentro la respuesta de la contraseña 
+    return clave #alfinal va aleer todo el tipeado y la clave que coloquemos para asi definir que tipo de contraseña es
+print(f'Su nueva clave es: {contraseña(num)}')  #y al final de la linea de codigo vamos a implemetar la contrasema mediante el print
+
+3 Pregunta (Pues teniendo en cuenta que no haran una solucion a mi problema colo el mio 
+# en este punto añadiremos la libreria que funcionara mediante una interfaz en la cual esta es TK
+from tkinter import *
+from tkinter.ttk import*
+from time import strftime
+
+#Teniendo en Cuenta el reloj se actualizara constantemente la funcion def actualizacion constantemente actualizara los digitos del reloj como son Minutos,Horas,Segundos y fecha actual
+def actualizacion():
+    etiquetar_hm.config(text=strftime("%H:%M"))
+    etiqueta_s.config(text=strftime("%S"))
+    etiqueta_fecha.config(text=strftime("%A,%d/%m/%Y"))
+    etiqueta_s.after(1000,actualizacion)
+
+#APP tk lo que hara simplemente es ejecutar la interfaz desde el inicio de la funcion del tiempo y de demas 
+app = Tk()
+app.title("reloj digital") #Ejecuta el titulo de la Interfaz
+#aca arriba ñlo que haremos sera configurar la intefaz como arribla dice Reloj Digital que es titulo
+frame_hora=Frame() #Establece el frame time del reloj
+frame_hora.pack() 
+etiquetar_hm=Label(frame_hora,font=("digital",100),text="HORA:MINUTOS") #dentro de la interfaz mostrara la hora y los minutos ya puestos dentro de la intefaz
+etiquetar_hm.grid(row=0,column=0) #Establecemos los limites de la interfaz
+
+etiqueta_s=Label(frame_hora,font=("digital",50),text="segundos")#dentro de la interfaz mostrara los segundos ya puestos dentro de la intefaz
+etiqueta_s.grib(Row=0,column=1,sticky="N")#Establecemos los limites de la interfaz
+
+etiqueta_fecha=Label(frame_hora,font=("digital",50),text="dia/d/m/aaaa")#dentro de la interfaz mostrara la fecha y año ya puestos dentro de la intefaz
+etiqueta_s.grib(Row=0,column=1,sticky="N")#Establecemos los limites de la interfaz
+etiqueta_fecha.pack(anchor="center")
+
+actualizacion() #este punto actualizara el reloj completamente con cada frame
+app.mainloop() #esta ultima ejecutara el reloj para salga en una interfaz grafica 
+
+
